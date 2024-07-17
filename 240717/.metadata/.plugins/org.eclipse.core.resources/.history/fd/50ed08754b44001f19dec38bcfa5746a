@@ -1,0 +1,37 @@
+package dwarf;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		int[] height = new int[9];
+		int sum = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		for (int i=0; i<9; i++) {
+			height[i] = sc.nextInt();
+			sum += height[i];
+		}
+		
+		int N = sum;
+		int I = 0;
+		int J = 0;
+		
+		while(true) {
+			for (int i=0; i<9; i++)
+				for (int j=0; j<9; j++) {
+					N = sum - height[i] - height[j];
+					if (N==0)
+						I = i;
+						J = j;
+						break;
+				}
+			break;
+		}
+		System.out.println(I);
+		System.out.println(J);
+	}
+
+}

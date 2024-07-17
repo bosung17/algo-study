@@ -1,0 +1,40 @@
+package supermario;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int[] mushroom = new int[10];
+		
+		for (int i=0; i<10; i++)
+			mushroom[i] = sc.nextInt();
+		
+		int[] sum = new int[10];
+		
+		for (int i=0; i<10; i++)
+			for (int j=0; j<=i; j++)
+				sum[i] += mushroom[j];
+		
+		int[] gap = new int[10];
+		
+		for (int i=0; i<10; i++) {
+			if (sum[i]<=100)
+				gap[i] = 100 - sum[i];
+			else
+				gap[i] = sum[i] - 100;
+		}
+		
+		int mingap = gap[0];
+		int N = 0;
+		
+		for (int i=0; i<10; i++)
+			if (gap[i] <= mingap) {
+				mingap = gap[i];
+				N = i;
+			}
+		System.out.println(sum[N]);
+	}
+}
