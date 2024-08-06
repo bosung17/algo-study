@@ -51,9 +51,8 @@ public class Solution {
 		}
 		return sum;
 	}
+	
 	static void reset() {
-		for (int i=0; i<stack.length; i++) {
-			stack[i] = 0;
-		}
+		top = -1;
 	}
 }
