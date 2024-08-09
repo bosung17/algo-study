@@ -1,4 +1,4 @@
-package sero;
+package SWEA_5356_의석이의_세로로_말해요;
 
 import java.util.Scanner;
 

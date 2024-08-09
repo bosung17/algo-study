@@ -1,4 +1,4 @@
-package game;
+package SWEA_4615_재미있는_오셀로_게임;
 
 import java.util.Scanner;
 
