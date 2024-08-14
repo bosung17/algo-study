@@ -68,6 +68,8 @@ public class Solution {
 				}
 			}
 			
+//			System.out.println(Arrays.deepToString(all));
+			
 			for (int i = 0; i < p; i++) {
 				for (int j = 1; i + j < p; j++) {
 					boolean same = true;
@@ -82,6 +84,8 @@ public class Solution {
 					}
 				}
 			}
+			
+			System.out.println(Arrays.deepToString(all));
 			
 			int[] number = new int[p];
 			
