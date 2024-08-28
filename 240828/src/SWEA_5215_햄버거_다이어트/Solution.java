@@ -23,6 +23,7 @@ public class Solution {
 			
 			// 각 재료의 점수와 칼로리를 저장할 2차원 배열 만들기
 			board = new int[N][2];
+			sel = new boolean[N];
 			
 			// 각 햄버거마다 점수와 칼로리 저장하기
 			for (int i = 0; i < N; i++) {
@@ -30,18 +31,20 @@ public class Solution {
 				board[i][1] = sc.nextInt(); // 칼로리
 			}
 			
+			max = 0;
 			
+			hamsel(0);
+			
+			System.out.println("#" + t + " " + max);
 			
 		}
 	}
 	
 	static void hamsel(int idx) {
 		
-		int score = 0;
-		int cal = 0;
-		max = 0;
-		
 		if (idx == N) {
+			int score = 0;
+			int cal = 0;
 			for (int i = 0; i < N; i++) {
 				if (sel[i]) {
 					score += board[i][0];
@@ -53,11 +56,12 @@ public class Solution {
 					max = score;
 				}
 			}
+			return;
 		}
 		
 		sel[idx] = true;
-		hamsel(idx++);
+		hamsel(idx + 1);
 		sel[idx] = false;
-		hamsel(idx++);
+		hamsel(idx + 1);
 	}
 }
