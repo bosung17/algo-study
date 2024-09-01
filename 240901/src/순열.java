@@ -5,18 +5,15 @@ public class 순열 {
 	static int N = arr.length;
 	static boolean[] visited = new boolean[N];
 	static int[] result = new int[N];
-	static int count = 0;
 	
 	public static void main(String[] args) {
 		perm(0);
-		System.out.println(count);
 	}
 	
 	static void perm(int idx) {
 		
 		if (idx == N) {
 			System.out.println(Arrays.toString(result));
-			count++;
 			return;
 		}
 		
