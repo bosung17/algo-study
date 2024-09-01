@@ -60,13 +60,13 @@ public class Solution {
 					}
 				}
 				// 퀸을 놓을 때마다 확인용으로 board 출력해봄
-//				for (int r = 0; r < N; r++) {
-//					for (int c = 0; c < N; c++) {
-//						System.out.print(board[r][c] + " ");
-//					}
-//					System.out.println();
-//				}
-//				System.out.println();
+				for (int r = 0; r < N; r++) {
+					for (int c = 0; c < N; c++) {
+						System.out.print(board[r][c] + " ");
+					}
+					System.out.println();
+				}
+				System.out.println();
 			}
 			// 퀸을 놓을 위치를 찾았으면 break
 			if (setQ[idx]) break;
