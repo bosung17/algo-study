@@ -1,4 +1,4 @@
-package BOJ_2156_포도주_시식;
+package BOJ_2156_포도주_시식亡;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -64,3 +64,4 @@ public class Main {
 		return Math.min(Math.min(a, b),c);
 	}
 }
+// 2개 앞을 판단하면 될 줄 알았는데 안 된다는 걸 다 구현하고 알게 됨... 亡..

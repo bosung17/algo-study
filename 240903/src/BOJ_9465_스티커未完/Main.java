@@ -1,4 +1,4 @@
-package BOJ_9465_스티커;
+package BOJ_9465_스티커未完;
 
 import java.util.Scanner;
 
@@ -27,3 +27,4 @@ public class Main {
 		}
 	}
 }
+// 포도주 풀고 보니 얘도 하나 앞을 본다고 되는 게 아닌 거 같아서 다시 설계할 예정
