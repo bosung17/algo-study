@@ -1,4 +1,4 @@
-package BOJ_11053_가장_긴_증가하는_부분_수열;
+package BOJ_11053_가장_긴_증가하는_부분_수열未完;
 
 import java.util.Arrays;
 import java.util.Scanner;
