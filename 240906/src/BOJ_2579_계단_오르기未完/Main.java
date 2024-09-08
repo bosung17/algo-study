@@ -1,4 +1,4 @@
-package BOJ_2579_계단_오르기;
+package BOJ_2579_계단_오르기未完;
 
 import java.util.Arrays;
 import java.util.Scanner;
