@@ -1,4 +1,4 @@
-package BOJ_2011_암호코드;
+package BOJ_2011_암호코드亡;
 
 //import java.io.BufferedReader;
 //import java.io.IOException;
