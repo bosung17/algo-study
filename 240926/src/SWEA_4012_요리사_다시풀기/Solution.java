@@ -23,6 +23,8 @@ public class Solution {
 			}
 			
 			int ans = Integer.MAX_VALUE;
+			
+			
 			for (int i = 0; i < 1<<N; i++) {
 				int[] A = new int[N];
 				int[] B = new int[N];
