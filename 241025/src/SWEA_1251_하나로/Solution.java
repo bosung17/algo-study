@@ -51,10 +51,13 @@ public class Solution {
 			int count = 0;
 			double distS = 0;
 			for (int i = 0; i < edge.length; i++) {
-				if (p[(int)edge[i][0]] != p[(int)edge[i][1]]) {
+				// p[(int)edge[i][0]]랑 p[(int)edge[i][1]]를 px, py에 저장하지 않으면...
+				int px = p[(int)edge[i][0]];
+				int py = p[(int)edge[i][1]];
+				if (px != py) {
 					for (int j = 0; j < N; j++) {
-						if (p[j] == p[(int)edge[i][1]]) {
-							p[j] = p[(int)edge[i][0]];
+						if (p[j] == py) {	// 여기에서 py가 일정해야 하는데 p[(int)edge[i][1]]로 하면 값이 덮어써져서 if문에 안 걸리는 애들이 생김
+							p[j] = px;
 						}
 					}
 					distS += edge[i][2];
@@ -65,8 +68,7 @@ public class Solution {
 					break;
 				}
 			}
-			long ans = (long) Math.round(distS*E);
-			System.out.println("#" + t + " " + ans);
+			System.out.println("#" + t + " " + Math.round(distS*E));
 		}
 	}
 }
