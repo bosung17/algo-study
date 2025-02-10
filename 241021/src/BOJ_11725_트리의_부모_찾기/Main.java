@@ -14,10 +14,11 @@ public class Main {
 
 		ArrayList<Integer>[] board = new ArrayList[N + 1];
 
-		for (int i = 0; i < N + 1; i++) {
+		for (int i = 1; i < N + 1; i++) {
 			board[i] = new ArrayList<Integer>();
 		}
 
+		// board[i]라는 list에 i와 연결된 정점 저장
 		for (int i = 1; i < N; i++) {
 			int fir = sc.nextInt();
 			int sec = sc.nextInt();
@@ -30,7 +31,7 @@ public class Main {
 		}
 
 		Queue<Integer> qu = new LinkedList<>();
-		qu.add(1);
+		qu.add(1);	// 1이 루트니까 1부터
 		while (!qu.isEmpty()) {
 			int temp = qu.poll();
 			for (int j = 0; j < board[temp].size(); j++) {
