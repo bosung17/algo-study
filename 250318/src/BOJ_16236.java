@@ -48,8 +48,9 @@ public class BOJ_16236 {
 		Queue<int[]> qu = new LinkedList<>();
 		qu.add(new int[] { r, c, 0 });
 		visited[r][c] = true;
+		int min = Integer.MAX_VALUE;
 
-		while (!qu.isEmpty()) {
+		to: while (!qu.isEmpty()) {
 			int[] curr = qu.poll();
 			int[] dr = { 0, 1, 0, -1 };
 			int[] dc = { 1, 0, -1, 0 };
@@ -60,7 +61,11 @@ public class BOJ_16236 {
 					qu.add(new int[] { nr, nc, curr[2] + 1 });
 					visited[nr][nc] = true;
 					if (board[nr][nc] != 0 && board[nr][nc] < size) {
+						if (curr[2] + 1 > min) {
+							break to;
+						}
 						fish.add(new int[] { nr, nc, curr[2] + 1 });
+						min = curr[2] + 1;
 					}
 				}
 			}
@@ -70,13 +75,10 @@ public class BOJ_16236 {
 			Collections.sort(fish, new Comparator<int[]>() {
 				@Override
 				public int compare(int[] o1, int[] o2) {
-					if (o1[2] == o2[2]) {
-						if (o1[0] == o2[0]) {
-							return o1[1] - o2[1];
-						}
-						return o1[0] - o2[0];
+					if (o1[0] == o2[0]) {
+						return o1[1] - o2[1];
 					}
-					return o1[2] - o2[2];
+					return o1[0] - o2[0];
 				}
 			});
 			shark[0] = fish.get(0)[0];
